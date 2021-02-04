@@ -1,61 +1,21 @@
 # TimePicker
 
-<<<<<<< HEAD
-React Time Picker Control.
-
-[![NPM version][npm-image]][npm-url]
-[![build status][circleci-image]][circleci-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![Dependencies](https://img.shields.io/david/react-component/time-picker.svg?style=flat-square)](https://david-dm.org/react-component/time-picker)
-[![DevDependencies](https://img.shields.io/david/dev/react-component/time-picker.svg?style=flat-square)](https://david-dm.org/react-component/time-picker?type=dev)
-[![npm download][download-image]][download-url]
-[![Storybook](https://gw.alipayobjects.com/mdn/ob_info/afts/img/A*CQXNTZfK1vwAAAAAAAAAAABjAQAAAQ/original)](https://github.com/react-component/time-picker)
-
-[Storybook]: https://github.com/storybooks/press/blob/master/badges/storybook.svg
-[npm-image]: http://img.shields.io/npm/v/rc-time-picker.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rc-time-picker
-[circleci-image]: https://img.shields.io/circleci/react-component/time-picker.svg?style=flat-square
-[circleci-url]: https://circleci.com/gh/react-component/time-picker
-[coveralls-image]: https://img.shields.io/coveralls/react-component/time-picker.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/react-component/time-picker?branch=maste
-[node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
-[node-url]: http://nodejs.org/download/
-[download-image]: https://img.shields.io/npm/dm/rc-time-picker.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rc-time-picker
-
-example
---------
-
-http://react-component.github.io/time-picker/
-=======
 React Time Picker in native javascript date.
 
->>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 
 install
 -------
 
 ```
-<<<<<<< HEAD
-npm install rc-time-picker
-=======
 npm install @Latitude-cartagene/lc-time-picker
->>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 ```
 
 Usage
 -----
 
 ```
-<<<<<<< HEAD
-import TimePicker from 'rc-time-picker';
-import ReactDOM from 'react-dom';
-import 'rc-time-picker/assets/index.css';
-ReactDOM.render(<TimePicker />, container);
-=======
 import TimePicker from '@Latitude-cartagene/lc-time-picker';
 
->>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 ```
 
 API
@@ -82,11 +42,7 @@ API
 | showHour                | Boolean                           | true | whether show hour | |
 | showMinute              | Boolean                           | true | whether show minute |
 | showSecond              | Boolean                           | true | whether show second |
-<<<<<<< HEAD
-| format                  | String                            | - | moment format |
-=======
 | format                  | String                            | - | HH:mm or HH:mm:ss |
->>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 | disabledHours           | Function                          | - | disabled hour options |
 | disabledMinutes         | Function                          | - | disabled minute options |
 | disabledSeconds         | Function                          | - | disabled second options |
@@ -108,25 +64,3 @@ API
 | inputIcon             | ReactNode                           |  | specific the time-picker icon. |
 | clearIcon             | ReactNode                           |  | specific the clear icon. |
 
-<<<<<<< HEAD
-## Test Case
-
-```
-npm test
-```
-
-## Coverage
-
-```
-npm run coverage
-```
-
-open coverage/ dir
-
-License
--------
-
-rc-time-picker is released under the MIT license.
-=======
-
->>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
