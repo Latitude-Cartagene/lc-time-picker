@@ -1,5 +1,6 @@
 # TimePicker
 
+<<<<<<< HEAD
 React Time Picker Control.
 
 [![NPM version][npm-image]][npm-url]
@@ -26,22 +27,35 @@ example
 --------
 
 http://react-component.github.io/time-picker/
+=======
+React Time Picker in native javascript date.
+
+>>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 
 install
 -------
 
 ```
+<<<<<<< HEAD
 npm install rc-time-picker
+=======
+npm install @Latitude-cartagene/lc-time-picker
+>>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 ```
 
 Usage
 -----
 
 ```
+<<<<<<< HEAD
 import TimePicker from 'rc-time-picker';
 import ReactDOM from 'react-dom';
 import 'rc-time-picker/assets/index.css';
 ReactDOM.render(<TimePicker />, container);
+=======
+import TimePicker from '@Latitude-cartagene/lc-time-picker';
+
+>>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 ```
 
 API
@@ -68,7 +82,11 @@ API
 | showHour                | Boolean                           | true | whether show hour | |
 | showMinute              | Boolean                           | true | whether show minute |
 | showSecond              | Boolean                           | true | whether show second |
+<<<<<<< HEAD
 | format                  | String                            | - | moment format |
+=======
+| format                  | String                            | - | HH:mm or HH:mm:ss |
+>>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
 | disabledHours           | Function                          | - | disabled hour options |
 | disabledMinutes         | Function                          | - | disabled minute options |
 | disabledSeconds         | Function                          | - | disabled second options |
@@ -90,6 +108,7 @@ API
 | inputIcon             | ReactNode                           |  | specific the time-picker icon. |
 | clearIcon             | ReactNode                           |  | specific the clear icon. |
 
+<<<<<<< HEAD
 ## Test Case
 
 ```
@@ -108,3 +127,6 @@ License
 -------
 
 rc-time-picker is released under the MIT license.
+=======
+
+>>>>>>> 0df2ba07cbf0c81f745862796d558c94efce877d
