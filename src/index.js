@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './lib/index.css';
+import {TimePicker} from "./lib/index"
+
+const language = "fr"
+
+const onChange = (value) => {
+  console.log("onChange", value)
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div>
+    <TimePicker
+        style={{
+          position: "relative",
+        }}
+        className="lc-time-picker"
+        popupClassName="lc-time-picker-popup"
+        defaultValue={new Date()}
+        placement={"bottomLeft"}
+        use12Hours={language === "en"}
+        showSecond={false}
+        minuteStep={5}
+        allowEmpty={false}
+        inputReadOnly
+        onChange={onChange}
+      />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
