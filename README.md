@@ -30,9 +30,9 @@ API
 | disabled                | Boolean                           | false   | whether picker is disabled |
 | allowEmpty              | Boolean                           | true | allow clearing text |
 | open                    | Boolean                           | false | current open state of picker. controlled prop |
-| defaultValue            | moment                            | null | default initial value |
-| defaultOpenValue        | moment                            | moment() | default open panel value, used to set utcOffset,locale if value/defaultValue absent |
-| value                   | moment                            | null | current value |
+| defaultValue            | Date object                       | null | default initial value |
+| defaultOpenValue        | Date object                       | new Date() | default open panel value, used to set utcOffset,locale if value/defaultValue absent |
+| value                   | Date object                       | null | current value |
 | placeholder             | String                            | '' | time input's placeholder |
 | className               | String                            | '' | time picker className |
 | inputClassName          | String                            | '' | time picker input element className |
