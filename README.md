@@ -1,6 +1,6 @@
 # TimePicker
 
-React Time Picker Control.
+React Time Picker in native javascript date.
 
 
 install
@@ -65,8 +65,3 @@ API
 | clearIcon             | ReactNode                           |  | specific the clear icon. |
 
 
-
-License
--------
-
-lc-time-picker is released under the MIT license.
