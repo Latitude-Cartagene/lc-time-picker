@@ -1,6 +1,6 @@
 {
   "name": "@Latitude-cartagene/lc-time-picker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": "git@github.com:Latitude-Cartagene/lc-time-picker.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Latitude-Cartagene"
