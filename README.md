@@ -60,7 +60,15 @@ API
 | minuteStep              | Number                            | 1 | interval between minutes in picker  |
 | secondStep              | Number                            | 1 | interval between seconds in picker  |
 | focusOnOpen             | Boolean                           | false | automatically focus the input when the picker opens |
-| inputReadOnly             | Boolean                           | false | set input to read only |
-| inputIcon             | ReactNode                           |  | specific the time-picker icon. |
-| clearIcon             | ReactNode                           |  | specific the clear icon. |
+| inputReadOnly           | Boolean                           | false | set input to read only |
+| inputIcon               | ReactNode                         |  | specific the time-picker icon. |
+| clearIcon               | ReactNode                         |  | specific the clear icon. |
+| ariaLabelInput          | String                            | 'Select time' | specific the aria-label of input |
+| ariaLabelSelectHours    | String                            | 'Select hours' | specific the aria-label of the hours select |
+| ariaLabelSelectMinutes    | String                            | 'Select minutes' | specific the aria-label of the minutes select |
+| ariaLabelSelectSeconds    | String                            | 'Select seconds' | specific the aria-label of the seconds select |
+| ariaLabelSelectAMPM    | String                            | 'Select AM or PM' | specific the aria-label of the AM/PM select |
+
+
+
 
