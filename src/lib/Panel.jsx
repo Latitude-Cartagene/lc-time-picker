@@ -124,6 +124,10 @@ class Panel extends Component {
       secondStep,
       inputReadOnly,
       clearIcon,
+      ariaLabelSelectHours,
+      ariaLabelSelectMinutes,
+      ariaLabelSelectSeconds,
+      ariaLabelSelectAMPM
     } = this.props;
     const { value, currentSelectPanel } = this.state;
     const disabledHourOptions = this.disabledHours();
@@ -196,6 +200,10 @@ class Panel extends Component {
           use12Hours={use12Hours}
           onEsc={onEsc}
           isAM={this.isAM()}
+          ariaLabelSelectHours={ariaLabelSelectHours}
+          ariaLabelSelectMinutes={ariaLabelSelectMinutes}
+          ariaLabelSelectSeconds={ariaLabelSelectSeconds}
+          ariaLabelSelectAMPM={ariaLabelSelectAMPM}
         />
         {addon(this)}
       </div>

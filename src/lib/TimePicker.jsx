@@ -42,6 +42,11 @@ class Picker extends Component {
     use12Hours: false,
     focusOnOpen: false,
     onKeyDown: noop,
+    ariaLabelInput: "Select time",
+    ariaLabelSelectHours: "Select hours",
+    ariaLabelSelectMinutes: "Select minutes",
+    ariaLabelSelectSeconds: "Select seconds",
+    ariaLabelSelectAMPM: "Select AM or PM"
   };
 
   constructor(props) {
@@ -96,7 +101,7 @@ class Picker extends Component {
   };
 
   onKeyDown = e => {
-    if (e.keyCode === 40) {
+    if (e.key === "Enter") {
       this.setOpen(true);
     }
   };
@@ -152,6 +157,10 @@ class Picker extends Component {
       minuteStep,
       secondStep,
       clearIcon,
+      ariaLabelSelectHours,
+      ariaLabelSelectMinutes,
+      ariaLabelSelectSeconds,
+      ariaLabelSelectAMPM
     } = this.props;
     const { value } = this.state;
     return (
@@ -182,6 +191,10 @@ class Picker extends Component {
         focusOnOpen={focusOnOpen}
         onKeyDown={onKeyDown}
         clearIcon={clearIcon}
+        ariaLabelSelectHours={ariaLabelSelectHours}
+        ariaLabelSelectMinutes={ariaLabelSelectMinutes}
+        ariaLabelSelectSeconds={ariaLabelSelectSeconds}
+        ariaLabelSelectAMPM={ariaLabelSelectAMPM}
       />
     );
   }
@@ -285,6 +298,7 @@ class Picker extends Component {
       inputReadOnly,
       inputIcon,
       popupStyle,
+      ariaLabelInput
     } = this.props;
     const { open, value } = this.state;
     const popupClassName = this.getPopupClassName();
@@ -322,6 +336,9 @@ class Picker extends Component {
             onChange={noop}
             readOnly={!!inputReadOnly}
             id={id}
+            role="button"
+            aria-label={ariaLabelInput}
+            tabIndex="0"
           />
           {inputIcon || <span className={`${prefixCls}-icon`} />}
           {this.renderClearButton()}

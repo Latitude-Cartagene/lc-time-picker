@@ -26,6 +26,11 @@ ReactDOM.render(
         allowEmpty={false}
         inputReadOnly
         onChange={onChange}
+        ariaLabelInput={"Sélectionnez l'horaire"}
+        ariaLabelSelectHours={"Sélectionnez une heure"}
+        ariaLabelSelectMinutes={"Sélectionnez les minutes"}
+        ariaLabelSelectSeconds={"Sélectionnez les secondes"}
+        ariaLabelSelectAMPM={""}
       />
     </div>
   </React.StrictMode>,

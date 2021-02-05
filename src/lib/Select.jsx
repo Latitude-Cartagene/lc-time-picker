@@ -53,24 +53,32 @@ class Select extends Component {
         [`${prefixCls}-select-option-selected`]: selectedIndex === index,
         [`${prefixCls}-select-option-disabled`]: item.disabled,
       });
+
       const onClick = item.disabled
         ? undefined
         : () => {
             this.onSelect(item.value);
           };
-      const onKeyDown = e => {
-        if (e.keyCode === 13) onClick();
-        else if (e.keyCode === 27) onEsc();
-      };
+
+      const onKeyDown = (e) => {
+        if(e.key === "Enter"){
+          onClick()
+        }
+        else if(e.key === "Escape"){
+          onEsc()
+        }
+      }
+      
       return (
         <li
-          role="button"
+          role="option"
           onClick={onClick}
+          onKeyDown={onKeyDown}
           className={cls}
           key={index} // eslint-disable-line react/no-array-index-key
           disabled={item.disabled}
           tabIndex="0"
-          onKeyDown={onKeyDown}
+          aria-label={item.value}
         >
           {item.value}
         </li>
@@ -112,7 +120,7 @@ class Select extends Component {
   }
 
   render() {
-    const { prefixCls, options } = this.props;
+    const { prefixCls, options, ariaLabel } = this.props;
     const { active } = this.state;
     if (options.length === 0) {
       return null;
@@ -127,7 +135,7 @@ class Select extends Component {
         onMouseLeave={this.handleMouseLeave}
         ref={this.saveRoot}
       >
-        <ul ref={this.saveList}>{this.getOptions()}</ul>
+        <ul ref={this.saveList} tabIndex="0" role="listbox" aria-label={ariaLabel}>{this.getOptions()}</ul>
       </div>
     );
   }

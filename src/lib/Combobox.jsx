@@ -68,7 +68,7 @@ class Combobox extends Component {
   };
 
   getHourSelect(hour) {
-    const { prefixCls, hourOptions, disabledHours, showHour, use12Hours, onEsc } = this.props;
+    const { prefixCls, hourOptions, disabledHours, showHour, use12Hours, onEsc, ariaLabelSelectHours } = this.props;
     if (!showHour) {
       return null;
     }
@@ -92,6 +92,7 @@ class Combobox extends Component {
         onSelect={this.onItemChange}
         onMouseEnter={() => this.onEnterSelectPanel('hour')}
         onEsc={onEsc}
+        ariaLabel={ariaLabelSelectHours}
       />
     );
   }
@@ -105,6 +106,7 @@ class Combobox extends Component {
       showMinute,
       value: propValue,
       onEsc,
+      ariaLabelSelectMinutes
     } = this.props;
     if (!showMinute) {
       return null;
@@ -121,6 +123,7 @@ class Combobox extends Component {
         onSelect={this.onItemChange}
         onMouseEnter={() => this.onEnterSelectPanel('minute')}
         onEsc={onEsc}
+        ariaLabel={ariaLabelSelectMinutes}
       />
     );
   }
@@ -134,6 +137,7 @@ class Combobox extends Component {
       defaultOpenValue,
       value: propValue,
       onEsc,
+      ariaLabelSelectSeconds
     } = this.props;
     if (!showSecond) {
       return null;
@@ -150,12 +154,13 @@ class Combobox extends Component {
         onSelect={this.onItemChange}
         onMouseEnter={() => this.onEnterSelectPanel('second')}
         onEsc={onEsc}
+        ariaLabel={ariaLabelSelectSeconds}
       />
     );
   }
 
   getAMPMSelect() {
-    const { prefixCls, use12Hours, format, isAM, onEsc } = this.props;
+    const { prefixCls, use12Hours, format, isAM, onEsc, ariaLabelSelectAMPM } = this.props;
     if (!use12Hours) {
       return null;
     }
@@ -175,6 +180,7 @@ class Combobox extends Component {
         onSelect={this.onItemChange}
         onMouseEnter={() => this.onEnterSelectPanel('ampm')}
         onEsc={onEsc}
+        ariaLabel={ariaLabelSelectAMPM}
       />
     );
   }
