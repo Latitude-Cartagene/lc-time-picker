@@ -47,7 +47,7 @@ class Select extends Component {
   };
 
   getOptions() {
-    const { options, selectedIndex, prefixCls, onEsc } = this.props;
+    const { options, selectedIndex, prefixCls, onEsc, onArrowRight, onArrowLeft, onArrowDown, onArrowUp } = this.props;
     return options.map((item, index) => {
       const cls = classNames({
         [`${prefixCls}-select-option-selected`]: selectedIndex === index,
@@ -61,11 +61,24 @@ class Select extends Component {
           };
 
       const onKeyDown = (e) => {
+        
         if(e.key === "Enter"){
           onClick()
         }
         else if(e.key === "Escape"){
           onEsc()
+        }
+        else if(e.key === "ArrowRight"){
+          onArrowRight()
+        }
+        else if(e.key === "ArrowLeft"){
+          onArrowLeft()
+        }
+        else if(e.key === "ArrowDown"){
+          onArrowDown(e)
+        }
+        else if(e.key === "ArrowUp"){
+          onArrowUp(e)
         }
       }
       
@@ -120,7 +133,7 @@ class Select extends Component {
   }
 
   render() {
-    const { prefixCls, options, ariaLabel } = this.props;
+    const { prefixCls, options, ariaLabel, type } = this.props;
     const { active } = this.state;
     if (options.length === 0) {
       return null;
@@ -130,12 +143,12 @@ class Select extends Component {
     });
     return (
       <div
-        className={cls}
+        className={cls + " " + type}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         ref={this.saveRoot}
       >
-        <ul ref={this.saveList} tabIndex="0" role="listbox" aria-label={ariaLabel}>{this.getOptions()}</ul>
+        <ul className={"lc-time-picker-ul-"+type} ref={this.saveList} tabIndex="0" role="listbox" aria-label={ariaLabel}>{this.getOptions()}</ul>
       </div>
     );
   }

@@ -83,6 +83,29 @@ class Combobox extends Component {
       hourAdj = hour;
     }
 
+    const onArrowRight = () => {
+      const elToFocus = document.querySelector(".lc-time-picker-ul-minute li.rc-time-picker-panel-select-option-selected");
+      if(elToFocus){
+        elToFocus.focus();
+      }
+      else{
+        document.querySelector(".lc-time-picker-ul-minute li:first-child").focus()
+      }
+    }
+    const onArrowLeft = () => {
+
+    }
+    const onArrowDown = (e) => {
+      if(e && e.target && e.target.nextElementSibling){
+        e.target.nextElementSibling.focus()
+      }
+    }
+    const onArrowUp = (e) => {
+      if(e && e.target && e.target.previousElementSibling){
+        e.target.previousElementSibling.focus()
+      }
+    }
+
     return (
       <Select
         prefixCls={prefixCls}
@@ -93,6 +116,10 @@ class Combobox extends Component {
         onMouseEnter={() => this.onEnterSelectPanel('hour')}
         onEsc={onEsc}
         ariaLabel={ariaLabelSelectHours}
+        onArrowRight={onArrowRight}
+        onArrowLeft={onArrowLeft}
+        onArrowDown={onArrowDown}
+        onArrowUp={onArrowUp}
       />
     );
   }
@@ -114,6 +141,30 @@ class Combobox extends Component {
     const value = propValue || defaultOpenValue;
     const disabledOptions = disabledMinutes(value.getHours());
 
+    const onArrowRight = () => {
+
+    }
+    const onArrowLeft = () => {
+      const elToFocus = document.querySelector(".lc-time-picker-ul-hour li.rc-time-picker-panel-select-option-selected");
+      if(elToFocus){
+        elToFocus.focus();
+      }
+      else{
+        document.querySelector(".lc-time-picker-ul-hour li:first-child").focus()
+      }
+    }
+
+    const onArrowDown = (e) => {
+      if(e && e.target && e.target.nextElementSibling){
+        e.target.nextElementSibling.focus()
+      }
+    }
+    const onArrowUp = (e) => {
+      if(e && e.target && e.target.previousElementSibling){
+        e.target.previousElementSibling.focus()
+      }
+    }
+
     return (
       <Select
         prefixCls={prefixCls}
@@ -124,6 +175,10 @@ class Combobox extends Component {
         onMouseEnter={() => this.onEnterSelectPanel('minute')}
         onEsc={onEsc}
         ariaLabel={ariaLabelSelectMinutes}
+        onArrowRight={onArrowRight}
+        onArrowLeft={onArrowLeft}
+        onArrowDown={onArrowDown}
+        onArrowUp={onArrowUp}
       />
     );
   }
@@ -145,6 +200,13 @@ class Combobox extends Component {
     const value = propValue || defaultOpenValue;
     const disabledOptions = disabledSeconds(value.getHours(), value.getMinutes());
 
+    const onArrowRight = () => {
+
+    }
+    const onArrowLeft = () => {
+
+    }
+
     return (
       <Select
         prefixCls={prefixCls}
@@ -155,6 +217,8 @@ class Combobox extends Component {
         onMouseEnter={() => this.onEnterSelectPanel('second')}
         onEsc={onEsc}
         ariaLabel={ariaLabelSelectSeconds}
+        onArrowRight={onArrowRight}
+        onArrowLeft={onArrowLeft}
       />
     );
   }
