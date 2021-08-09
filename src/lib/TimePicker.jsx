@@ -93,6 +93,13 @@ class Picker extends Component {
 
   onVisibleChange = open => {
     this.setOpen(open);
+    if(open){
+      setTimeout(() => {
+        if(document.querySelector(".rc-time-picker-panel-inner li.rc-time-picker-panel-select-option-selected")){
+          document.querySelector(".rc-time-picker-panel-inner li.rc-time-picker-panel-select-option-selected").focus();
+        }
+      })
+    }
   };
 
   onEsc = () => {
@@ -104,6 +111,8 @@ class Picker extends Component {
     if (e.key === "Enter") {
       this.setOpen(true);
     }
+    e.stopPropagation();
+    return false;
   };
 
   setValue(value) {

@@ -56,14 +56,16 @@ class Select extends Component {
 
       const onClick = item.disabled
         ? undefined
-        : () => {
+        : (e) => {
             this.onSelect(item.value);
+            e.stopPropagation();
+            return false;
           };
 
       const onKeyDown = (e) => {
         
         if(e.key === "Enter"){
-          onClick()
+          onClick(e)
         }
         else if(e.key === "Escape"){
           onEsc()
@@ -80,6 +82,8 @@ class Select extends Component {
         else if(e.key === "ArrowUp"){
           onArrowUp(e)
         }
+        e.stopPropagation();
+        return false;
       }
       
       return (
