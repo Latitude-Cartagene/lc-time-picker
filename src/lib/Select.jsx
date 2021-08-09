@@ -59,6 +59,7 @@ class Select extends Component {
         : (e) => {
             this.onSelect(item.value);
             e.stopPropagation();
+            e.preventDefault()
             return false;
           };
 
@@ -83,6 +84,7 @@ class Select extends Component {
           onArrowUp(e)
         }
         e.stopPropagation();
+        // e.preventDefault();
         return false;
       }
       
