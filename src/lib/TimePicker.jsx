@@ -274,15 +274,14 @@ class Picker extends Component {
     }
 
     return (
-      <a
-        role="button"
+      <button
         className={`${prefixCls}-clear`}
         title={clearText}
         onClick={this.onClear}
         tabIndex={0}
       >
         {clearIcon || <i className={`${prefixCls}-clear-icon`} />}
-      </a>
+      </button>
     );
   }
 
