@@ -94,10 +94,11 @@ class Select extends Component {
           onClick={onClick}
           onKeyDown={onKeyDown}
           className={cls}
-          key={index} // eslint-disable-line react/no-array-index-key
+          key={index}
           disabled={item.disabled}
           tabIndex="0"
           aria-label={item.value}
+          aria-selected={true}
         >
           {item.value}
         </li>
