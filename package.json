@@ -1,6 +1,6 @@
 {
   "name": "@latitude-cartagene/lc-time-picker",
-  "version": "1.4.0",
+  "version": "1.5.3",
   "repository": "git@github.com:Latitude-Cartagene/lc-time-picker.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Latitude-Cartagene"
@@ -13,11 +13,11 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "rc-trigger": "^5.2.10",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "5.0.0-next.47"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "react-scripts": "5.0.0",
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
