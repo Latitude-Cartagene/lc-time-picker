@@ -96,7 +96,7 @@ class Picker extends Component {
     if(open){
       setTimeout(() => {
         if(document.querySelector(".rc-time-picker-panel-inner li.rc-time-picker-panel-select-option-selected")){
-          document.querySelector(".rc-time-picker-panel-inner li.rc-time-picker-panel-select-option-selected").focus();
+          document.querySelector(".rc-time-picker-panel-inner li.rc-time-picker-panel-select-option-selected").focus({preventScroll:true});
         }
       })
     }
